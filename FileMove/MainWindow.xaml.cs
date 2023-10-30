@@ -43,11 +43,15 @@ namespace FileMove
                     counta++;
                     if (counta % 10 == 0)
                     {
-                        Dispatcher.Invoke(new Action(() => { label.Content = counta.ToString(); }));
-                        
+                        Dispatcher.Invoke(new Action(() => { label.Content = counta.ToString(); }));                      
                         
                     }
                 }
+                Dispatcher.Invoke(new Action(() => { label.Content = counta.ToString();
+
+                    MessageBox.Show("转移完成！");
+                }));
+
 
             }).Start();
             
